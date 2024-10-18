@@ -3,14 +3,14 @@ package entity;
 import java.util.Arrays;
 
 /**
- * A person at the UofT.
+ * A person at the University of Toronto.
  */
 public class Person implements Comparable<Person> {
 
     /**
      * The person's name (family name last).
      */
-    private final String[] name;
+    private final String[] name; // Using an array to accomadate any number of names
 
     /**
      * The person's UTORid
@@ -35,7 +35,8 @@ public class Person implements Comparable<Person> {
 
     public String[] getName() {
         // Try not to create aliases!
-        return Arrays.copyOf(name, name.length);
+        return name;
+        // return Arrays.copyOf(name, name.length);
     }
 
     /**
